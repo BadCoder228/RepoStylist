@@ -47,7 +47,7 @@ def Inject() -> None:
 if __name__ == "__main__":
     
     while True:
-        Banner(True)
+        Banner()
         input_data: str = input(f"C:\\\\{getlogin()} >>> ")
 
         match(input_data):
