@@ -9,6 +9,7 @@ from sys import exit
 
 LE_PATH: str = f"C:/Users/{getlogin()}/AppData/LocalLow/semiwork/Repo/MetaSave.es3"
 LE_PASSWORD: str = "Why would you want to cheat?... :o It's no fun. :') :'D"
+LE_BEAUTIFUL_CONSOLE: str = f"C:\\\\{getlogin()} >>> "
 
 def BeautifulString(word: str) -> str:
     return f"you need to type \"{word}\" in the console below."
@@ -36,19 +37,19 @@ def Inject() -> None:
         with open(LE_PATH, 'wb') as f:
             f.write(file_data.save(dumps(data)))
 
-        print("\nSuccess! You may now close the window.")
+        print(f"\n{Fore.GREEN}[Success!]{Fore.WHITE} You may now close the window.\n")
         
     except Exception as e:
-        print(f"\n{Fore.RED}[An error occurred!] {Fore.WHITE}Here's the error: {e}. Try to fix it. You may now close the window.")
+        print(f"\n{Fore.RED}[An error occurred!]{Fore.WHITE} Here's the error: {e}. Try to fix it. You may now close the window.\n")
     
-    input()
+    input(LE_BEAUTIFUL_CONSOLE)
     exit(0)
 
 if __name__ == "__main__":
     
     while True:
         Banner()
-        input_data: str = input(f"C:\\\\{getlogin()} >>> ")
+        input_data: str = input(LE_BEAUTIFUL_CONSOLE)
 
         match(input_data):
             case "done":
