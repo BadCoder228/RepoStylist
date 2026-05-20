@@ -39,7 +39,7 @@ def Inject() -> None:
             file_data: ES3 = ES3(f.read(), LE_PASSWORD)
             data: dict = file_data.load()
 
-        data["cosmeticUnlocks"]["value"] = list(range(1, 548))
+        data["cosmeticUnlocks"]["value"] = list(range(0, 548))
 
         with open(LE_PATH, 'wb') as f:
             f.write(file_data.save(dumps(data)))
